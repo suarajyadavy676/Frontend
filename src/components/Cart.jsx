@@ -1,6 +1,8 @@
 import React from 'react'
+import { useToast } from '@chakra-ui/react'
 
 function Cart() {
+  const toast = useToast()
   return (
     <div>
       <div className="container mx-auto mt-10">
@@ -109,7 +111,13 @@ function Cart() {
           <span>Total cost</span>
           <span>$16</span>
         </div>
-        <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
+        <button onClick={()=>toast({
+          title: 'Thank You!',
+          description: "Checkout Successfully",
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        })} className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
               Checkout
             </button>
       </div>
