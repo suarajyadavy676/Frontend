@@ -3,6 +3,7 @@ import { MdLocationOn } from "react-icons/md";
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 import { Link } from "react-router-dom";
+import Products from "./Products";
 
 function MainBody() {
   let arr = [
@@ -80,6 +81,7 @@ function MainBody() {
         <p className="text-xl font-bold my-5">Almost Gone</p>
         <p>SkinStore is becoming Dermstore, and that means saying goodbye to some of our favorites.</p>
       </div>
+      <Products/>
     </div>
   );
 }

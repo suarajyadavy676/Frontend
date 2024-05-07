@@ -12,8 +12,8 @@ function AccountMenu() {
     <div>
       <Menu>
         <MenuButton as={Button}>
-        <span className="text-xl">
-          <MdAccountCircle className="inline text-3xl" /> Account
+        <span className="text-lg">
+          <MdAccountCircle className="inline text-xl" /> Account
         </span>
         </MenuButton>
         <MenuList>

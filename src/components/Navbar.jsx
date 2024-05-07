@@ -3,8 +3,10 @@ import { PiShoppingCartSimpleDuotone } from "react-icons/pi";
 import { MdAccountCircle } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import AccountMenu from "./navbar/AccountMenu";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  let navigate = useNavigate()
   const [isFixed, setIsFixed] = useState(false);
 
   // Function to check the scroll position
@@ -43,9 +45,9 @@ function Navbar() {
           <div className="mr-4 cursor-pointer">
             <AccountMenu/>
           </div>
-          <p className="ml-8 cursor-pointer text-xl">
-            <PiShoppingCartSimpleDuotone className="inline text-3xl" /><sup className="bg-red-600 text-white py-1 px-2 rounded-full">0</sup> Cart
-          </p>
+          <button onClick={()=>navigate('/cart')} className="ml-8 cursor-pointer text-xl">
+            <PiShoppingCartSimpleDuotone className="inline text-3xl" /><sup className="bg-red-600 text-white py-1 px-2 rounded-full">2</sup> Cart
+          </button>
         </div>
       </div>
 
