@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { PiShoppingCartSimpleDuotone } from "react-icons/pi";
 import { MdAccountCircle } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
+import AccountMenu from "./navbar/AccountMenu";
 
 function Navbar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -39,11 +40,11 @@ function Navbar() {
           <CiSearch className="absolute right-1 top-1 rounded-md text-3xl inline hover:bg-slate-300"/>
         </div>
         <div className="flex justify-center items-center ">
-          <p className="mr-4">
-            <MdAccountCircle className="inline text-xl" /> Account
-          </p>
-          <p className="ml-8">
-            <PiShoppingCartSimpleDuotone className="inline text-2xl" /><sup>0</sup> Cart
+          <div className="mr-4 cursor-pointer">
+            <AccountMenu/>
+          </div>
+          <p className="ml-8 cursor-pointer text-xl">
+            <PiShoppingCartSimpleDuotone className="inline text-3xl" /><sup className="bg-red-600 text-white py-1 px-2 rounded-full">0</sup> Cart
           </p>
         </div>
       </div>
