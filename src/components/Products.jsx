@@ -7,7 +7,9 @@ function Products() {
 
   const fetchProducts = async() => {
     //for development
-    let res = await axios.get("http://localhost:3000/products")
+    // let res = await axios.get("http://localhost:3000/products")
+    // for productuon
+    let res = await axios.get(`${import.meta.env.REACT_APP_API_URL}products`)
     console.log(res.data)
     setData(res.data)
   }
